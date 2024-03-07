@@ -24,7 +24,10 @@ const App: FC = () => {
       }}
     >
       <JsonFileInput onClick={handleUpdateData}/>
-      <ParsedInfoTable data={data} />
+      <ParsedInfoTable data={{
+        name: data.name,
+        messages: data.messages.slice(0, 10)
+      }} />
     </Box>
   )
 }

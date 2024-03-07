@@ -68,6 +68,7 @@ export const parseSmartContracts = (data: TJsonData): TParsedInfo => {
                 return element.replace(/\n/g, '').length > 0
             })
             parsedMessages.push({
+                id: message.id,
                 date: messageDate,
                 edited: messageEdited,
                 from: messageFrom,

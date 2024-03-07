@@ -1,5 +1,6 @@
 body {
-    margin: 0,
+    margin: 0;
+    background-color: #b0b4ba
 }
 
 * {
@@ -7,4 +8,13 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+@keyframes slidin {
+    from {
+        height: 0
+    }
+    to {
+        height: 'auto'
+    }
 }

@@ -4,6 +4,7 @@ export type TMessageText = string | {
 }
 
 export type TParsedSingleMessage = {
+    id: number
     date: Date
     edited: Date
     from: string
@@ -12,6 +13,7 @@ export type TParsedSingleMessage = {
 }
 
 export type TSingleMessage = {
+    id: number
     date: string
     edited: string
     from: string

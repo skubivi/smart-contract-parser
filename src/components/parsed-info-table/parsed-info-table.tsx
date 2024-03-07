@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { TParsedInfo } from "../../sevices/types/jsonData"
-import { Box } from "@mui/material"
+import { Box, Divider } from "@mui/material"
 import ParsedInfoRow from "./components/parsed-info-row/parsed-info-row"
 
 interface IParsedInfoTable {
@@ -13,15 +13,23 @@ const ParsedInfoTable: FC<IParsedInfoTable> = ({
     return (
         <Box
             sx={{
-                width: '100%',
+                width: 1000,
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center'
+                alignItems: 'center',
+                background: 'white',
+                padding: 5,
+                gap: 2,
+                borderRadius: 10
             }}
         >
+            {data.messages.length > 0 &&
+                <ParsedInfoRow isHeader={true} />
+            }
+            <Divider orientation="horizontal" />
             {data.messages.map(message => {
                 return (
-                    <ParsedInfoRow data={message}/>
+                    <ParsedInfoRow data={message} key={message.date.toString()}/>
                 )
             })}
         </Box>
